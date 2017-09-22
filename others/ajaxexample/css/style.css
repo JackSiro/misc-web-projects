@@ -1,0 +1,216 @@
+/********************************************************************************
+* This script is brought to you by Vasplus Programming Blog.
+* Website: www.vasplus.info
+* Email: info@vasplus.info
+*********************************************************************************/
+
+
+
+@charset "UTF-8";
+
+.vasplus_pb_Search form, 
+.vasplus_pb_Search div, 
+.vasplus_pb_Search input, 
+.vasplus_pb_Search ul,  
+.vasplus_pb_Search a, 
+.vasplus_pb_Search li,  
+.vasplus_pb_Search img,
+.vasplus_pb_Search span
+{ 
+	margin:0px; 
+	padding:0px;
+	float:left;
+	border:none;
+	color:#050505;
+	font-size:11px;
+	border:none;
+	text-decoration:none;
+}
+
+.vpb_search_results{display:none;}
+
+.vasplus_pb_Search 
+#vpv_search_box 
+{
+	padding:none;
+	width:300px;
+	height:15px;
+	border:1px solid #fff;
+}
+.vasplus_pb_Search 
+#vpv_search_button
+{
+	padding:none;
+	width:20px;
+	height:15px;
+	float:right;
+	background:url(../images/vpb_search_button.jpg) no-repeat bottom right;
+	border-left:1px solid #e5e5e5; 
+	padding-left:3px;
+	cursor:pointer;
+}
+.vasplus_pb_Search input:focus
+{
+	border:none;
+	outline:none;
+	
+}
+.vasplus_pb_Search {
+	font-family:Verdana, Geneva, sans-serif;
+	background:#627aad;
+	padding:5px;
+	margin:0px;
+	border:1px solid #1d4088;
+	clear:both;
+	float:left;
+	height:25px;
+	color:#050505;
+	width:353px;
+}
+.vasplus_pb_Search form 
+{
+	width:340px;
+	background:#FFF;
+	height:15px;
+	border:1px solid #3b5998;
+	padding:5px;
+	float:left;
+}
+.vasplus_pb_Search .vpb_search_results 
+{
+	position:absolute;
+	background:#F30;
+	float:left;
+	background:#ffffff;
+	width:350px;
+	border:1px solid #333333;
+	margin-top:25px;
+	text-align:left;
+}
+.vasplus_pb_Search 
+.vpb_search_results  ul, 
+.vasplus_pb_Search 
+.vpb_search_results li,  
+.vasplus_pb_Search 
+.vpb_search_results a
+{
+	padding:0px;
+	list-style:none;
+	float:left;
+	margin:0px;
+}
+.vasplus_pb_Search 
+.vpb_search_results li
+{
+	 padding:4px 5px;
+	 border-bottom:1px solid #FFF;
+	 border-top:1px solid #FFF;
+	 width:340px;
+	
+}
+.vasplus_pb_Search 
+.vpb_search_results li:hover
+{
+	background:#6d84b4;
+	border-bottom:1px solid #3b5998;
+	border-top:1px solid #3b5998;
+	color:#FFF;
+}
+.vasplus_pb_Search 
+.vpb_search_results li:hover 
+.text, 
+.vasplus_pb_Search 
+.vpb_search_results li:hover 
+.category, 
+.vasplus_pb_Search 
+.vpb_search_results li:hover  
+.subtext
+{
+	color:#fff;
+}
+.vasplus_pb_Search 
+.vpb_search_results img
+{
+	margin-right:8px;
+}
+.vasplus_pb_Search 
+.vpb_search_results .text
+{
+	color:#000;
+	font-weight:bold;
+	font-size:11px;
+	margin-bottom:3px;
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.vpb_titles, 
+.vasplus_pb_Search 
+.vpb_search_results  
+.vpb_titles:hover
+{
+	background:#f2f2f2;
+	width:340px;
+	padding:2px 5px;
+	border:none;
+	border-top: 1px solid #e2e2e2;
+	color:#000;
+}
+.vasplus_pb_Search 
+.vpb_search_results  
+.vpb_titles:hover .text
+{
+	color:#000;
+}
+
+.vasplus_pb_Search 
+.vpb_search_results a 
+.text
+{
+	color:#3b5998;
+	background:none;
+	width:280px;
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.category
+{
+	color:#737373;
+	width:280px;
+	font-weight:normal;
+	font-size:11px;
+	margin-bottom:3px;
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.subtext
+{
+	font-size:9px;
+	color:#a6a6a6;
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.more, 
+.vasplus_pb_Search 
+.vpb_search_results 
+.more:hover
+{
+	text-align:center;
+	font-size:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top: 1px solid #e2e2e2;
+	border-bottom:1px solid #3b5998;
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.more span
+{
+	width:340px;
+	
+}
+.vasplus_pb_Search 
+.vpb_search_results 
+.more img 
+{
+	float:none;
+}
