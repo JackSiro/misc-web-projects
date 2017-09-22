@@ -1,0 +1,63 @@
+body{
+	color:black;
+}
+.web_title{
+	padding:20px;
+	text-align:center;
+}
+
+.main_table{
+	width:100%;
+	height:100%;
+	margin:0px;
+}
+.header{
+	background: red;
+	height:70px;
+}
+
+.menutb td{
+	width:150px;
+	border:1 px solid white;
+	text-align:center;
+	background:orange;
+	font-size: 20px;
+}
+.pricelist{
+	border: 1px solid black;
+	width:80%;
+}
+.menutb a{
+	color:white;
+}
+
+.main_body{
+	color:black;
+}
+.main_body_tt{
+	width:100%;
+	color:black;
+}
+.my_image{
+	display:inline-block;
+	width:243px;
+	height:432px;
+}
+.my_image2{
+	display:inline-block;
+	width:286px;
+	height:286px;
+}
+
+.left_panel{
+	width:70%;
+}
+.right_panel{
+	width:28%;
+	background: #eee;
+	padding: 10px; 
+}
+.footer{
+	background:purple;
+	height: 70px;
+}

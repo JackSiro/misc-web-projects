@@ -1,0 +1,15 @@
+body { font-family: arial,sans-serif; font-size:15px;margin: 50px 10px;	padding: 0; background: #eee;	} 
+h1{font-size:30px;}
+input,textarea{font-size:20px;padding:5px;width:100%; color:#fff; border:1px solid #000; border-radius: 5px; background:purple;} 
+table{width:80%;margin:10px;}
+input[type="submit"]{padding:10px;font-size:30px;width: 50%;}
+img { border: 0; }
+.rounded {	-webkit-border-radius: 5px;	-moz-border-radius: 5px; border-radius: 5px;}
+#content { margin: 0 auto;	width: 750px; }
+#top-section { background-color: purple;	border: 1px solid #eee; color: #fff; font-weight: bold; padding: 12px ;}	
+#bottom-section { background-color: purple;	border: 1px solid #eee; color: #fff; font-weight: bold; padding: 12px ;}				
+#debug { margin-top: 50px; text-align:left;	}
+#lower-section { border: 1px solid purple; margin: 10px 0;padding:10px;  font-size:20px;}
+.menutb{margin:0px;}
+.menutb td{ width:150px; border:1 px solid white;text-align:center;background:violet;font-size: 20px;}
+.menutb a{color:white; text-decoration:none;}
