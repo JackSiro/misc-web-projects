@@ -35,7 +35,7 @@
                die(AS_I_TOP.'SITE OPTIONS'.AS_I_TOP_A.'<form action="'.as_new_options().'" method="post">
                         <table><tr><td>Site Name:</td><td><input type="text" name="sitename"  value="'.as_get_option('sitename').'"></td></tr>
                         <tr><td>Site Url:</td><td><input type="text" name="siteurl" autocomplete="off" value="'.AS_SITEURL.'"></td></tr>
-                        <tr><td>Keywords</td><td><input type="text" name="keywords" autocomplete="off"  value="'.as_get_option('keywords').'"></td></tr>
+                        <tr><td>Site Slogan</td><td><input type="text" name="slogan" autocomplete="off"  value="'.as_get_option('slogan').'"></td></tr>
                         <tr><td>Descriptions</td><td><textarea name="description">'.as_get_option('description').'</textarea></td></tr></table><br>
                         <center><input type="submit" class="submit_this" name="SaveSite" value="Save Options"></center><br></form>'.AS_I_BOT);
                                 

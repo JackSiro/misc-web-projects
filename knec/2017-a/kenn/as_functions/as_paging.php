@@ -2,12 +2,12 @@
 	// PAGES FUNCTIONS
 	// Begin Pages Functions 
 	
-	function my_ticket_cart($cartno) {
-		$my_db_query = "SELECT * FROM my_hotel WHERE catid = '$cartno'";
+	function my_stock_cart($cartno) {
+		$my_db_query = "SELECT * FROM my_item WHERE catid = '$cartno'";
 		$database = new As_Dbconn();
 		if( $database->my_num_rows( $my_db_query ) > 0 ) {
-                    list( $catid, $cat_slug, $cat_title) = $database->get_row( $my_db_query );
-		    return $cat_title;
+                    list( $catid, $item_slug, $item_title) = $database->get_row( $my_db_query );
+		    return $item_title;
 		} else  {
 		    return false;
 		}
@@ -15,11 +15,11 @@
 	}
 	
 
-	function my_ticket_seller($employeeid, $infor) {
-		$my_db_query = "SELECT * FROM my_employee_account WHERE employeeid = '$employeeid'";
+	function my_stock_seller($userid, $infor) {
+		$my_db_query = "SELECT * FROM my_user_account WHERE userid = '$userid'";
 		$database = new As_Dbconn();
 		if( $database->my_num_rows( $my_db_query ) > 0 ) {
-                    list( $employeeid, $employee_name, $employee_fname, $employee_surname, $employee_sex, $employee_password, $employee_email, $employee_group, $employee_points, $employee_bio, $employee_mailcon, $employee_joined, $employee_mobile, $employee_web, $employee_location, $employee_security_quiz, $employee_security_ans, $employee_avatar) = $database->get_row( $my_db_query );
+                    list( $userid, $user_name, $user_fname, $user_surname, $user_sex, $user_password, $user_email, $user_group, $user_points, $user_bio, $user_mailcon, $user_joined, $user_mobile, $user_web, $user_location, $user_security_quiz, $user_security_ans, $user_avatar) = $database->get_row( $my_db_query );
 		    return $infor;
 		} else  {
 		    return false;
@@ -28,19 +28,19 @@
 	}
 	
 		
-    function my_cat_items(){
-		$my_db_query = "SELECT * FROM my_hotel";
+    function my_item_items(){
+		$my_db_query = "SELECT * FROM my_item";
 		$database = new As_Dbconn();
 		
 		$results = $database->get_results( $my_db_query );
 		foreach( $results as $row )
 		{
-		    	return '<option value="'.$row['catid'].'">'.$row['cat_title'].'</option>';		                            
+		    	return '<option value="'.$row['catid'].'">'.$row['item_title'].'</option>';		                            
 		}			
 	}
 
 	function my_latest_catitems($catid){
-		$my_db_query = "SELECT * FROM my_item WHERE ticket_cat = '$catid' LIMIT 4";
+		$my_db_query = "SELECT * FROM my_item WHERE stock_itemid = '$catid' LIMIT 4";
 		$database = new As_Dbconn();
 		
 		$results = $database->get_results( $my_db_query );
@@ -52,32 +52,32 @@
 				
 	}
 	
-	function my_latest_cat_items_home(){
-		$my_db_query = "SELECT * FROM my_hotel";
+	function my_latest_item_items_home(){
+		$my_db_query = "SELECT * FROM my_item";
 		$database = new As_Dbconn();
 		
-		$ticket_cats = $database->get_results( $my_db_query );
-		foreach( $ticket_cats as $cat )
+		$stock_itemids = $database->get_results( $my_db_query );
+		foreach( $stock_itemids as $cat )
 		{
-		    $ticket_cat = $cat['catid'];
+		    $stock_itemid = $cat['catid'];
 			
-			$my_cat_items_query = "SELECT * FROM my_item WHERE ticket_cat = '$ticket_cat' LIMIT 4";
+			$my_item_items_query = "SELECT * FROM my_item WHERE stock_itemid = '$stock_itemid' LIMIT 4";
 			
-			if ($my_cat_items_query) {
-				echo '<hr><h3>'.$cat['cat_title'].'</h3>
+			if ($my_item_items_query) {
+				echo '<hr><h3>'.$cat['item_title'].'</h3>
 				   <div class="row">
 					<div class="productsrow">';
 			}	
 				$database = new As_Dbconn();
 				
-				$cat_items = $database->get_results( $my_cat_items_query );
-				foreach( $cat_items as $row )
+				$item_items = $database->get_results( $my_item_items_query );
+				foreach( $item_items as $row )
 				{
-					echo '<div class="product menu-hotel">
+					echo '<div class="product menu-category">
 									
-					<a href="'.my_siteLynk().$row['ticket_slug'].'"><div class="product-image">
-						<img class="product-image menu-item list-group-item" src="'.my_siteLynk_img().$row['ticket_img'].'">
-					</div></a> <a href="'.my_siteLynk().$row['ticket_slug'].'" class="menu-item list-group-item">'.substr($row['ticket_title'],0,20).'<span class="badge">KSh '.$row['ticket_price'].'</span></a></div>';
+					<a href="'.my_siteLynk().$row['stock_slug'].'"><div class="product-image">
+						<img class="product-image menu-item list-group-item" src="'.my_siteLynk_img().$row['stock_img'].'">
+					</div></a> <a href="'.my_siteLynk().$row['stock_slug'].'" class="menu-item list-group-item">'.substr($row['stock_title'],0,20).'<span class="badge">KSh '.$row['stock_quantity'].'</span></a></div>';
 				}
 		   
 				echo '</div></div>';
@@ -85,18 +85,18 @@
 		}				
 	}
 	
-	function my_latest_cat_items(){
+	function my_latest_item_items(){
 	$my_db_query = "SELECT * FROM my_item LIMIT 4";
 	$database = new As_Dbconn();
 	
 	$results = $database->get_results( $my_db_query );
 	foreach( $results as $row )
 	{
-		echo '<div class="product menu-hotel">
-				<a href="'.my_siteLynk().$row['ticket_slug'].'"><div class="menu-hotel-name list-group-item active">'.my_ticket_cart($row['ticket_cat']).'</div></a>
-				<a href="'.my_siteLynk().$row['ticket_slug'].'"><div class="product-image">
-					<img class="product-image menu-item list-group-item" src="'.my_siteLynk_img().$row['ticket_img'].'" />
-				</div></a> <a href="'.my_siteLynk().$row['ticket_slug'].'" class="menu-item list-group-item">'.substr($row['ticket_title'],0,20).'<span class="badge">KSh '.$row['ticket_price'].'</span></a>
+		echo '<div class="product menu-category">
+				<a href="'.my_siteLynk().$row['stock_slug'].'"><div class="menu-category-name list-group-item active">'.my_stock_cart($row['stock_itemid']).'</div></a>
+				<a href="'.my_siteLynk().$row['stock_slug'].'"><div class="product-image">
+					<img class="product-image menu-item list-group-item" src="'.my_siteLynk_img().$row['stock_img'].'" />
+				</div></a> <a href="'.my_siteLynk().$row['stock_slug'].'" class="menu-item list-group-item">'.substr($row['stock_title'],0,20).'<span class="badge">KSh '.$row['stock_quantity'].'</span></a>
 
 			</div>';
 	}
@@ -105,25 +105,25 @@
 	}
 
 	function my_home_categories(){
-		$my_db_query = "SELECT * FROM my_hotel LIMIT 9";
+		$my_db_query = "SELECT * FROM my_item LIMIT 9";
 		$database = new As_Dbconn();		
 		$results = $database->get_results( $my_db_query );
 		foreach( $results as $row ) {
-			echo '<a href="'.my_siteLynk().$row['cat_slug'].'" >
-			<div class="cat_lynk"><img class="cat_icon" src="'.my_siteLynk_icon().$row['cat_icon'].'"/>
-			'.$row['cat_title'].'</div></a>';
+			echo '<a href="'.my_siteLynk().$row['item_slug'].'" >
+			<div class="item_lynk"><img class="item_icon" src="'.my_siteLynk_icon().$row['item_icon'].'"/>
+			'.$row['item_title'].'</div></a>';
 	   }				
 	}
 
 	function my_lookup_cat($request){
-		$my_db_query = "SELECT * FROM my_hotel WHERE cat_slug = '$request'";
+		$my_db_query = "SELECT * FROM my_item WHERE item_slug = '$request'";
 		$database = new As_Dbconn();
 		if( $database->my_num_rows( $my_db_query ) > 0 ) { return true; } 
 		else  { return false; }
 	}
 	
 	function my_lookup_user($request){
-		$my_db_query = "SELECT * FROM my_employee_account WHERE employee_name = '$request'";
+		$my_db_query = "SELECT * FROM my_user_account WHERE user_name = '$request'";
 		$database = new As_Dbconn();
 		if( $database->my_num_rows( $my_db_query ) > 0 ) { return true; } 
 		else  { return false; }
@@ -137,8 +137,37 @@
 	}
 	
 	function my_lookup_item($request){
-		$my_db_query = "SELECT * FROM my_item WHERE ticket_slug = '$request'";
+		$my_db_query = "SELECT * FROM my_item WHERE stock_slug = '$request'";
 		$database = new As_Dbconn();
 		if( $database->my_num_rows( $my_db_query ) > 0 ) { return true; } 
 		else  { return false; }
 	}
+	
+	
+	function as_feedback_message()
+	{
+		if( isset($_SESSION['AS_SUCCMSG_ARR']) && is_array($_SESSION['AS_SUCCMSG_ARR']) && count($_SESSION['AS_SUCCMSG_ARR']) >0 ) 
+		{ ?>
+		<div class="success_log">
+			<ul>									
+			<?php foreach($_SESSION['AS_SUCCMSG_ARR'] as $as_succ_msg) { ?>
+				<li><?php echo $as_succ_msg ?></li> 
+			<?php } ?>
+			</ul>
+		</div>
+		<?php unset($_SESSION['AS_SUCCMSG_ARR']); 
+		}
+		
+		if( isset($_SESSION['AS_ERRMSG_ARR']) && is_array($_SESSION['AS_ERRMSG_ARR']) && count($_SESSION['AS_ERRMSG_ARR']) >0 ) 
+		{ ?>
+		<div class="error_log">
+			<ul>									
+			<?php foreach($_SESSION['AS_ERRMSG_ARR'] as $as_error_msg) { ?>
+				<li><?php echo $as_error_msg ?></li> 
+			<?php } ?>
+			</ul>
+		</div>
+			
+		<?php } unset($_SESSION['AS_ERRMSG_ARR']); 
+	}
+	

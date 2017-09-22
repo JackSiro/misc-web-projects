@@ -1,32 +1,6 @@
 <?php
 	
 	$database = new As_Dbconn();
-	//placeid, place_title, place_price, place_details, place_createdby, place_created, place_updatedby, place_updated
-	$As_Table_Details = array(	
-		'placeid int(11) NOT NULL AUTO_INCREMENT',
-		'place_title varchar(100) NOT NULL',
-		'place_price varchar(100) NOT NULL',
-		'place_details varchar(1000) NOT NULL',
-		'place_createdby int(10) unsigned DEFAULT NULL',
-		'place_created datetime DEFAULT NULL',
-		'place_updatedby int(10) unsigned DEFAULT NULL',
-		'place_updated datetime DEFAULT NULL',
-		'PRIMARY KEY (placeid)',
-		);
-	$add_query = $database->as_table_exists_create( 'as_place', $As_Table_Details ); 
-	//hotelid, hotel_title, hotel_price, hotel_details, hotel_createdby, hotel_created, hotel_updatedby, hotel_updated
-	$As_Table_Details = array(	
-		'hotelid int(11) NOT NULL AUTO_INCREMENT',
-		'hotel_title varchar(100) NOT NULL',
-		'hotel_price varchar(100) NOT NULL',
-		'hotel_details varchar(1000) NOT NULL',
-		'hotel_createdby int(10) unsigned DEFAULT NULL',
-		'hotel_created datetime DEFAULT NULL',
-		'hotel_updatedby int(10) unsigned DEFAULT NULL',
-		'hotel_updated datetime DEFAULT NULL',
-		'PRIMARY KEY (hotelid)',
-		);
-	$add_query = $database->as_table_exists_create( 'as_hotel', $As_Table_Details ); 
 	
 	$As_Table_Details = array(	
 		'optid int(11) NOT NULL AUTO_INCREMENT',
@@ -37,43 +11,68 @@
 		'updatedby int(10) unsigned DEFAULT NULL',
 		'updated datetime DEFAULT NULL',
 		'PRIMARY KEY (optid)',
-		);
+	);
 	$add_query = $database->as_table_exists_create( 'as_options', $As_Table_Details ); 
-	//ticketid, ticket_type, ticket_date, ticket_startdate, ticket_stopdate, ticket_information, ticket_tourist, ticket_mobile, ticket_amount, ticket_payment, 
-	$As_Table_Details = array(
-		'ticketid int(10) unsigned NOT NULL AUTO_INCREMENT',
-		'ticket_type varchar(100) NOT NULL DEFAULT 0',
-		'ticket_date varchar(100) NOT NULL DEFAULT 0',
-		'ticket_startdate varchar(100) DEFAULT NULL',
-		'ticket_stopdate varchar(100) DEFAULT NULL',
-		'ticket_information varchar(100) DEFAULT NULL',
-		'ticket_tourist varchar(100) DEFAULT NULL',
-		'ticket_mobile varchar(100) DEFAULT NULL',
-		'ticket_amount varchar(100) DEFAULT NULL',
-		'ticket_payment varchar(100) DEFAULT NULL',
-		'ticket_postedby int(10) unsigned DEFAULT 0',
-		'ticket_posted datetime DEFAULT NULL',
-		'ticket_updated datetime DEFAULT NULL',
-		'ticket_updatedby int(10) DEFAULT NULL',
-		'PRIMARY KEY (ticketid)',
-		);
-	$add_query = $database->as_table_exists_create( 'as_ticket', $As_Table_Details ); 
 	
 	$As_Table_Details = array(	
-		'employeeid int(11) NOT NULL AUTO_INCREMENT',
-		'employee_name varchar(50) NOT NULL',
-		'employee_fname varchar(50) NOT NULL',
-		'employee_surname varchar(50) NOT NULL',
-		'employee_sex varchar(10) NOT NULL',
-		'employee_password text NOT NULL',
-		'employee_email varchar(200) NOT NULL',
-		'employee_group varchar(50) NOT NULL DEFAULT "tourist"',
-		'employee_joined datetime DEFAULT NULL',
-		'employee_mobile varchar(50) NOT NULL',
-		'employee_web varchar(100) NOT NULL',
-		'employee_avatar varchar(50) NOT NULL DEFAULT "employee_default.jpg"',
-		'PRIMARY KEY (employeeid)',
-		);
-	$add_query = $database->as_table_exists_create( 'as_employee', $As_Table_Details ); 
+		'salesid int(11) NOT NULL AUTO_INCREMENT',
+		'sales_itemid int(10) unsigned DEFAULT NULL',
+		'sales_quantity int(10) unsigned DEFAULT NULL',
+		'sales_prices int(10) unsigned DEFAULT NULL',
+		'sales_servedby int(10) unsigned DEFAULT NULL',
+		'sales_served datetime DEFAULT NULL',
+		'PRIMARY KEY (salesid)',
+	);
+	$add_query = $database->as_table_exists_create( 'as_sales', $As_Table_Details ); 
+	
+	//stock_itemid, stock_unit, stock_quantity, stock_posted, stock_postedby, 
+	$As_Table_Details = array(	
+		'stockid int(10) unsigned NOT NULL AUTO_INCREMENT',
+		'stock_itemid int(10) NOT NULL DEFAULT 0',
+		'stock_quantity int(10) NOT NULL DEFAULT 0',
+		'stock_posted datetime DEFAULT NULL',
+		'stock_postedby int(10) unsigned DEFAULT 0',
+		'stock_updated datetime DEFAULT NULL',
+		'stock_updatedby int(10) DEFAULT NULL',
+		'PRIMARY KEY (stockid)',
+	);
+	$add_query = $database->as_table_exists_create( 'as_stock', $As_Table_Details ); 
+		
+	//itemid, item_slug, item_title, item_icon, item_content, item_unit, item_container, item_items, item_price, item_stock, item_createdby, item_created
+	$As_Table_Details = array(	
+		'itemid int(11) NOT NULL AUTO_INCREMENT',
+		'item_slug varchar(100) NOT NULL',
+		'item_title varchar(100) NOT NULL',
+		'item_icon varchar(50) NOT NULL DEFAULT "item_default.jpg"',
+		'item_content varchar(2000) NOT NULL',
+		'item_unit varchar(100) NOT NULL',
+		'item_container varchar(100) NOT NULL',
+		'item_items int(10) unsigned DEFAULT 0',
+		'item_price int(10) unsigned DEFAULT 0',
+		'item_stock int(10) NOT NULL DEFAULT 0',
+		'item_createdby int(10) unsigned DEFAULT NULL',
+		'item_created datetime DEFAULT NULL',
+		'item_updatedby int(10) unsigned DEFAULT NULL',
+		'item_updated datetime DEFAULT NULL',
+		'PRIMARY KEY (itemid)',
+	);
+	$add_query = $database->as_table_exists_create( 'as_item', $As_Table_Details ); 
+	
+	$As_Table_Details = array(	
+		'userid int(11) NOT NULL AUTO_INCREMENT',
+		'user_name varchar(50) NOT NULL',
+		'user_fname varchar(50) NOT NULL',
+		'user_surname varchar(50) NOT NULL',
+		'user_sex varchar(10) NOT NULL',
+		'user_password text NOT NULL',
+		'user_email varchar(200) NOT NULL',
+		'user_group varchar(50) NOT NULL DEFAULT "buyer"',
+		'user_joined datetime DEFAULT NULL',
+		'user_mobile varchar(50) NOT NULL',
+		'user_web varchar(100) NOT NULL',
+		'user_avatar varchar(50) NOT NULL DEFAULT "user_default.jpg"',
+		'PRIMARY KEY (userid)',
+	);
+	$add_query = $database->as_table_exists_create( 'as_user', $As_Table_Details ); 
 	
 ?>

@@ -7,7 +7,7 @@ class As_Dbconn {
     public function log_db_errors( $error, $query )
     {
         $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-hotel: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'Content-category: text/html; charset=iso-8859-1' . "\r\n";
         $headers .= 'To: Admin <'.SEND_ERRORS_TO.'>' . "\r\n";
         $headers .= 'From: Dekings <info@dekings.com>' . "\r\n";
     

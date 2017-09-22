@@ -62,9 +62,9 @@
 		
 	function as_check_admin() {
 		$database = new As_Dbconn();
-		$check_column = 'employeeid';
-		$check_for = array( 'employee_group' => 'manager' );
-		$exists = $database->exists( 'as_employee', $check_column,  $check_for );
+		$check_column = 'userid';
+		$check_for = array( 'user_group' => 'manager' );
+		$exists = $database->exists( 'as_user', $check_column,  $check_for );
 		if( $exists ){ return true; }
 	}
 	
@@ -77,34 +77,33 @@
 	}
 		
 	function as_get_option($option) {
+		$as_db_query = "SELECT * FROM as_options WHERE title = '$option'";
 		$database = new As_Dbconn();
-		$exists = $database->exists( 'as_options', 'optid',  array( 'title' => $option ) );
-		if( !$exists ) {
-			as_new_option($option, $option, '1');
-			return $option;
-		} else {		
-			$as_db_query = "SELECT * FROM as_options WHERE title = '$option'";
-			list( $optid, $title, $content) = $database->get_row( $as_db_query );
-			return $content;
+		if( $database->as_num_rows( $as_db_query ) > 0 ) {
+                    list( $optid, $title, $content) = $database->get_row( $as_db_query );
+		    return $content;
+		} else  {
+		    return false;
 		}
+		
 	}
 	
-	function as_new_option($title, $content, $employeeid) {
+	function as_new_option($title, $content, $userid) {
 		$database = new As_Dbconn();			
 		$New_Option_Details = array(
 			'title' => $title,
 			'content' => $content,
-			'createdby' => $employeeid,
+			'createdby' => $userid,
 			'created' => date('Y-m-d H:i:s'),
 		);
 		$add_query = $database->as_insert( 'as_options', $New_Option_Details ); 			
 	}
 
-	function as_set_option($option, $value, $employeeid) {
+	function as_set_option($option, $value, $userid) {
 		$database = new As_Dbconn();	
 		$Update_Site_Details = array(
 			'content' => $value,
-			'updatedby' => $employeeid,
+			'updatedby' => $userid,
 			'updated' => date('Y-m-d H:i:s'),
 		);
 		$where_clause = array('title' => $option);
@@ -115,7 +114,7 @@
 	  if ( isset( $_POST['SaveSite'] ) ) {                
 		as_new_option('sitename', $_POST['sitename'], '1');
 		as_new_option('siteurl', $_POST['siteurl'], '1');
-		as_new_option('keywords', $_POST['keywords'], '1');
+		as_new_option('slogan', $_POST['slogan'], '1');
 		as_new_option('description', $_POST['description'], '1');		
 	    header("location: ".AS_SITEURL);
 	        
@@ -126,17 +125,17 @@
 	      if ( isset( $_POST['SetAdministrator'] ) ) {			
 			$database = new As_Dbconn();			
 			$New_User_Details = array(		
-    				'employee_name' => trim($_POST['username']),
-    				'employee_fname' => trim($_POST['fname']),
-    				'employee_surname' => trim($_POST['surname']),
-    				'employee_password' => md5(trim($_POST['password'])),
-    				'employee_email' => trim($_POST['email']),
-    				'employee_group' => 'manager',
-    				'employee_avatar' => 'employee_default.jpg',
-    				'employee_joined' => date('Y-m-d H:i:s'),
+    				'user_name' => trim($_POST['username']),
+    				'user_fname' => trim($_POST['fname']),
+    				'user_surname' => trim($_POST['surname']),
+    				'user_password' => md5(trim($_POST['password'])),
+    				'user_email' => trim($_POST['email']),
+    				'user_group' => 'manager',
+    				'user_avatar' => 'user_default.jpg',
+    				'user_joined' => date('Y-m-d H:i:s'),
     			);
     			
-			$add_query = $database->as_insert( 'as_employee', $New_User_Details );
+			$add_query = $database->as_insert( 'as_user', $New_User_Details );
 			header("location: ".AS_SITEURL);
 			
 	      }
