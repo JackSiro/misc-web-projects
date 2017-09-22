@@ -1,0 +1,87 @@
+/** Website template by freewebsitetemplates.com **/
+#page #header ul.navigation {
+	list-style-type: none;
+	margin: 190px 0 0 0;
+	padding: 1px 0 3px 0;
+	display: inline-block;
+	background: transparent url("../images/bg-menu-body.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 38px;
+	line-height: 44px;
+	border-style: solid;
+	border-top: none;
+	border-bottom: none;
+	border-color: #ffffff;
+	border-width: 1px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:628px;
+}
+#page #header ul.navigation li {
+	float:left;
+	height: 40px;
+	padding:0;
+	margin:0;
+}
+#page #header ul.navigation li.first:hover {
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+#page #header ul.navigation li.last:hover {
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+}
+#page #header ul.navigation li a {
+	display: block;
+	text-decoration: none;
+	padding:0 20px;
+	font-family: Arial;
+	color: #646b60;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 #ffffff;
+}
+#page #header ul.navigation li:hover {
+	background: transparent url("../images/bg-menu-li.png");
+	background-repeat: repeat-x;
+}
+#page #header ul.navigation li:hover a {
+	background: transparent url("../images/bg-menu-arrow-selected.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	color: #fff9ae;
+	text-shadow: 1px 0 1px #787b5a;
+}
+#page #header ul.navigation li.active {
+	background: transparent url("../images/bg-menu-li.png");
+	background-repeat: repeat-x;
+}
+#page #header ul.navigation li.active a {
+	background: transparent url("../images/bg-menu-arrow-selected.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	color: #fff9ae;
+	text-shadow: 1px 0 1px #787b5a;
+}
+#page #header ul.navigation li.first.active {
+	display: inline-block;
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+#page #header ul.navigation li.last.active {
+	display: inline-block;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+}
+#page #body #content div.section ul li.first ul li h2 {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	background-image:none;
+	line-height:25px;
+	margin-bottom:0;
+	height:auto;
+	margin-top:-30px;
+}

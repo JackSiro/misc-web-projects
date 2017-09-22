@@ -1,0 +1,832 @@
+/** Website template by freewebsitetemplates.com **/
+body {
+	margin:0;
+	padding:0;
+	background:url("../images/pattern.jpg");
+	line-height:25px;
+}
+a {
+	outline:0;
+}
+img {
+	border:0;
+}
+#page {
+	width:100%;
+}
+#page #header {
+	width:960px;
+	height:210px;
+	margin:0 auto;
+	text-align:center;
+	position:relative;
+}
+#page #header img.logo {
+	position:absolute;
+	left:25px;
+	top:40px;
+}
+
+.tt_tb {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tt_tb tr, .tt_tb th, .tt_tb td {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.tt_tb, .tt_tb th {
+  border: 1px solid #fff;
+}
+
+.tt_tb th {
+  border-left: none;
+  border-right: none;
+  background: #a3a2a2;;
+  color: #fff;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.tt_tb tr:nth-child(odd) {
+  background: #eee;
+}
+
+.tt_tb tr:nth-child(even) {
+  background: #eee;
+}
+
+.tt_tb tr:hover {
+  background: #a3a2a2;;
+  cursor: pointer;
+}
+
+.readmore {
+	background:url("../images/interface.png") no-repeat scroll 0 -101px transparent;
+	display:block;
+	height:51px;
+	width:462px;
+	line-height:48px;
+	text-align:center;
+	text-decoration:none;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:22px;
+	color:#533a10;
+	text-shadow:0 1px 0 #ffffff;
+	text-transform:uppercase;
+}
+.readmore:hover {
+	background:url("../images/interface.png") no-repeat scroll 0 0 transparent;
+}
+
+input, textarea, select, .date {
+	border:#d8d5d5 1px solid;
+	background:#eee;
+	font-size:20px;
+	color:#48484e;
+	padding: 10px;
+	width: 94%;
+	margin: 10px;
+	outline: medium none;
+}
+
+#page #header span {
+	position:absolute;
+	left:767px;
+	top:70px;
+}
+#page #header span h3 {
+	font-family:Arial;
+	color:#252823;
+	font-size:16px;
+	font-weight:normal;
+	margin:0;
+	height:37px;
+}
+#page #header span h2 {
+	color:#252823;
+	font-family:Arial;
+	font-size:20px;
+	margin:0;
+	text-shadow:0 0px 0 #ccc;
+}
+#page #header ul.navigation {
+	list-style-type:none;
+	margin:190px 0 0 0;
+	padding:1px 0 3px 0;
+	display:inline-block;
+	background:transparent url("../images/bg-menu-body.png");
+	background-repeat:repeat-x;
+	background-position:center;
+	height:38px;
+	line-height:44px;
+	border-style:solid;
+	border-top:none;
+	border-bottom:none;
+	border-color:#ffffff;
+	border-width:1px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+#page #header ul.navigation li {
+	float:left;
+	height:40px;
+	padding:0;
+	margin:0;
+}
+#page #header ul.navigation li.first:hover {
+	-moz-border-radius:10px 0 0 10px;
+	border-radius:10px 0 0 10px;
+}
+#page #header ul.navigation li.last:hover {
+	-moz-border-radius:0 10px 10px 0;
+	border-radius:0 10px 10px 0;
+}
+#page #header ul.navigation li a {
+	display:block;
+	text-decoration:none;
+	padding:0 20px;
+	font-family:Arial;
+	color:#646b60;
+	font-size:15px;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-shadow:0 1px 0 #ffffff;
+}
+#page #header ul.navigation li:hover {
+	background:transparent url("../images/bg-menu-li.png");
+	background-repeat:repeat-x;
+}
+#page #header ul.navigation li:hover a {
+	background:transparent url("../images/bg-menu-arrow-selected.png");
+	background-repeat:no-repeat;
+	background-position:top center;
+	color:#fff9ae;
+	text-shadow:1px 0 1px #787b5a;
+}
+#page #header ul.navigation li.active {
+	background:transparent url("../images/bg-menu-li.png");
+	background-repeat:repeat-x;
+}
+#page #header ul.navigation li.active a {
+	background:transparent url("../images/bg-menu-arrow-selected.png");
+	background-repeat:no-repeat;
+	background-position:top center;
+	color:#fff9ae;
+	text-shadow:1px 0 1px #787b5a;
+}
+#page #header ul.navigation li.first.active {
+	display:inline-block;
+	-moz-border-radius:10px 0 0 10px;
+	border-radius:10px 0 0 10px;
+}
+#page #header ul.navigation li.last.active {
+	display:inline-block;
+	-moz-border-radius:0 10px 10px 0;
+	border-radius:0 10px 10px 0;
+}
+#page #body {
+	width:960px;
+	margin:0 auto;
+	background:transparent url("../images/bg-featured-top-shadow.png");
+	background-repeat:no-repeat;
+	background-position:top center;
+	padding-top:9px;
+}
+#page #body #content {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+}
+#page #body #content div#featured {
+	width:900px;
+	border-style:solid;
+	border-color:#fff799;
+	border-width:2px;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	background-color:#ffffff;
+	padding:50px 30px 30px 30px;
+	overflow:hidden;
+}
+
+#main_content{
+	width:900px;
+	border-style:solid;
+	border-color:#fff799;
+	border-width:2px;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	background-color:#eee;
+	padding:50px 30px 30px 30px;
+	overflow:hidden;
+}
+#page #body #content div#featured h2,h3,h4,h5,h6 {
+	margin:0;
+}
+#page #body #content div#featured h2 {
+	font-family:Arial;
+	font-size:22px;
+	color:#3d4c33;
+	margin-top:20px;
+	width:460px;
+}
+#page #body #content div#featured h2 a {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:21px;
+	color:#3d4c33;
+	line-height:43px;
+	font-weight:normal;
+	text-align:center;
+	letter-spacing:1px;
+	display:block;
+}
+#page #body #content div#featured h2 a span {
+	font-family:Arial;
+	font-size:31px;
+	color:#3d4c33;
+	letter-spacing: 2px;
+}
+#page #body #content div#featured a.readmore {
+	background:url("images/interface.png") no-repeat scroll 0 -101px transparent;
+	display:block;
+	height:51px;
+	width:462px;
+	line-height:48px;
+	text-align:center;
+	text-decoration:none;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:22px;
+	color:#533a10;
+	text-shadow:0 1px 0 #ffffff;
+	text-transform:uppercase;
+}
+#page #body #content div#featured a.readmore:hover {
+	background:url("../images/interface.png") no-repeat scroll 0 0 transparent;
+}
+#page #body #content div#featured a img {
+	float:right;
+	margin:0 10px;
+}
+#page #body #content div#featured p {
+	font-family:Arial;
+	font-size:14px;
+	color:#2e3b25;
+	line-height:30px;
+	text-align:justify;
+	width:460px;
+}
+#page #body #content div#featured p a {
+	font-family:Arial;
+	font-size:14px;
+	color:#2e3b25;
+}
+#page #body #content div#featured p a:hover {
+	font-family:Arial;
+	font-size:14px;
+	text-decoration:none;
+}
+#page #body #content div.articles {
+	width:960px;
+	height:237px;
+	background:transparent url("../images/bg-brown-round-bottom.png");
+	background-repeat:no-repeat;
+	background-position:bottom center;
+	padding-bottom:7px;
+}
+#page #body #content div.articles div {
+	background-color:#35271f;
+	width:940px;
+	height:237px;
+	padding:0 10px;
+}
+#page #body #content div.articles div h2, h3,h4,h5,h6 {
+	margin:0;
+	height:50px;
+	line-height:50px;
+	font-family:Arial;
+	font-size:22px;
+	color:#ffffff;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-align:center;
+}
+#page #body #content div.articles div h2 {
+	background:url("../images/border-horizontal.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom center;
+	margin-bottom:7px;
+}
+#page #body #content div.articles div ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#page #body #content div.articles div ul li {
+	float:left;
+	width:280px;
+	padding:0 15px;
+	background:url("../images/border-vertical.jpg");
+	background-repeat:repeat-y;
+	background-position:left;
+}
+#page #body #content div.articles div ul li.first {
+	background-image:none;
+}
+#page #body #content div.articles div ul li h2,h3,h4,h5,h6 {
+	font-family:Arial;
+	font-size:18px;
+	font-weight:normal;
+	color:#c2c2c1;
+	background:none;
+	text-transform:none;
+	text-align:left;
+}
+#page #body #content div.articles div ul li h2 a {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:normal;
+	color:#c2c2c1;
+}
+#page #body #content div.articles div ul li h2 a:hover {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:normal;
+	color:#ffffff;
+}
+#page #body #content div.articles div ul li p {
+	font-family:Arial;
+	font-size:14px;
+	color:#726c66;
+	margin-top:0;
+	letter-spacing: 1px;
+}
+#page #body #content div.articles div ul li p a {
+	color:#726c66;
+}
+#page #body #content div.articles div ul li p a:hover {
+	color:#ffffff;
+}
+#page #body #content div.connect {
+	margin-top:40px;
+	height:60px;
+	width:960px;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:top;
+}
+#page #body #content div.connect div {
+	height:60px;
+	line-height:60px;
+	width:940px;
+	padding:0 10px;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#page #body #content div.connect div a.twitter {
+	background:url("../images/twitter-update.png");
+	background-repeat:repeat-x;
+	background-position:center center;
+	height:23px;
+	width:192px;
+	display:block;
+	text-decoration:none;
+	float:left;
+	margin:18px 20px 0 0;
+}
+#page #body #content div.connect div p {
+	font-family:Arial;
+	font-size:14px;
+	font-weight:normal;
+	color:#252823;
+	text-align:justify;
+}
+#page #body #content div.connect div p a {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+}
+#page #body #content div.connect div p a:hover {
+	font-family:Arial;
+	font-size:14px;
+	color:#033842;
+}
+#page #body #content div.connect div p a.user {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	text-decoration:none;
+}
+#page #body #content div.connect div p a.user:hover {
+	color:#033842;
+	text-decoration:underline;
+}
+#page #body #content div.section {
+	width:960px;
+	margin-top:40px;
+	overflow:hidden;
+}
+#page #body #content div.section ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#page #body #content div.section ul li.first {
+	width:610px;
+	height:300px;
+	float:left;
+	margin-right:40px;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#page #body #content div.section ul li.first h2 {
+	height:60px;
+	line-height:60px;
+	font-family:Helvetica;
+	font-size:24px;
+	color:#252823;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#page #body #content div.section ul li.first ul {
+	list-style-type:none;
+	margin:0;
+	padding:20px 0;
+}
+#page #body #content div.section ul li.first ul li a img {
+	float:left;
+	margin:0 10px 10px 0;
+}
+#page #body #content div.section ul li.first ul li p {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	margin-top:0;
+	letter-spacing: 1px;
+	text-align:justify;
+}
+#page #body #content div.section ul li.first ul li p a {
+	font-family:Arial;
+	font-size:14px;
+	color:#343831;
+}
+#page #body #content div.section ul li.first ul li p a:hover {
+	color:#033842;
+}
+#page #body #content div.section ul li.first ul li p a.readmore {
+	text-decoration:none;
+}
+#page #body #content div.section ul li.first ul li p a.readmore:hover {
+	color:#033842;
+}
+#page #body #content div.section ul li.first ul li h2 {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	background-image:none;
+	line-height:25px;
+	margin-bottom:0;
+	height:auto;
+	margin-top:0;
+}
+#page #body #content div.section ul li.first ul li h2 a {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	text-decoration:none;
+	background-image:none;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:25px;
+}
+#page #body #content div.section ul li.last {
+	height:300px;
+	width:310px;
+	float:left;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#page #body #content div.section ul li.last h2 {
+	height:60px;
+	line-height:60px;
+	font-family:Helvetica;
+	font-size:24px;
+	color:#252823;
+	background:url("../images/border.jpg");
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#page #body #content div.section ul li.last ul {
+	list-style-type:none;
+	margin:0;
+	padding:20px 0;
+}
+#page #body #content div.section ul li.last ul li {
+	height:70px;
+	background-image:none;
+	margin:0;
+}
+#page #body #content div.section ul li.last ul li h2 {
+	background-image:none;
+	float:left;
+	height:20px;
+	line-height:20px;
+	margin:0;
+	text-align:center;
+	width:20px;
+	font-family:Arial;
+	font-size:12px;
+	color:#343831;
+}
+#page #body #content div.section ul li.last ul li h2 span {
+	float:left;
+	margin:0;
+	font-family:Arial;
+	font-size:22px;
+	font-weight:bold;
+}
+#page #body #content div.section ul li.last ul li span {
+	float:left;
+	height:auto;
+	margin:0;
+}
+#page #body #content div.section ul li.last ul li p {
+	float:right;
+	width:260px;
+	margin:0;
+	font-family:Arial;
+	font-size:14px;
+}
+#page #body #content div.section ul li.last ul li a {
+	float:right;
+	width:260px;
+	margin:0;
+	font-family:Arial;
+	font-size:14px;
+	text-decoration:none;
+	color:#252823;
+}
+#page #body #content div.section ul li.last ul li a:hover {
+	color:#033842;
+	text-decoration:underline;
+}
+#page #body div.content {
+	background:url("../images/bg-bottom-inner-content.png");
+	background-repeat:repeat-x;
+	background-position:bottom center;
+	padding-bottom:7px;
+	width:960px;
+}
+#page #body div.content div {
+	background-color:#8a9085;
+	overflow:hidden;
+	padding:80px 30px;
+}
+#page #body div.content div h1,h2,h3,h4,h5,h6 {
+	margin:0;
+	padding:0;
+}
+#page #body div.content div ul.section {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#page #body div.content div ul.section li {
+	margin-bottom:30px;
+}
+#page #body div.content div ul.section li h2 {
+	font-family:Arial;
+	font-size:20px;
+	color:#252823;
+	font-weight:normal;
+}
+#page #body div.content div ul.section li h4 {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	height:35px;
+	text-transform:uppercase;
+}
+#page #body div.content div ul.section li h3 {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	height:35px;
+}
+#page #body div.content div ul.section li h2 a {
+	font-family:Arial;
+	font-size:20px;
+	color:#252823;
+	text-decoration:none;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+#page #body div.content div ul.section li h2 a:hover {
+	color:#252823;
+}
+#page #body div.content div ul.section li p {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	margin:10px 0 10px 0;
+	line-height:30px;
+	text-align:justify;
+	letter-spacing: 1px;
+}
+#page #body div.content div ul.section li p a {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	margin:0 0 10px 0;
+}
+#page #body div.content div ul.section li p a:hover {
+	font-family:Arial;
+	font-size:14px;
+	color:#033842;
+	margin:0 0 10px 0;
+}
+#page #body div.content div ul.section li h5 {
+	margin:0;
+	height:35px;
+}
+#page #body div.content div ul.section li h5 a {
+	font-family:Arial;
+	font-size:16px;
+	color:#252823;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#page #body div.content div ul.section li h5 a:hover {
+	font-family:Arial;
+	font-size:16px;
+	color:#252823;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#page #body div.content div ul.section li h5 a span {
+	font-family:Arial;
+	font-size:16px;
+	color:#252823;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#page #body div.content div ul.details {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#page #body div.content div ul.details li {
+	margin-bottom:30px;
+}
+#page #body div.content div ul.details li h2 {
+	font-family:Arial;
+	font-size:16px;
+	color:#343831;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+#page #body div.content div ul.details li h3 {
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	font-weight:normal;
+	margin:0;
+	height:40px;
+	letter-spacing:1px;
+}
+#page #body div.content div ul.details li span {
+	display:block;
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	letter-spacing:1px;
+}
+#page #body div.content div div {
+	width:630px;
+	float:left;
+	padding:0;
+	margin:0 30px 0 0;
+}
+#page #body div.content div div ul.section li p {
+	margin-bottom:40px;
+	color: #252823;
+	font-family: Arial;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-align: justify;
+}
+#page #body div.content div div ul {
+}
+#page #body div.content div div.aside {
+	width:210px;
+	float:left;
+}
+#page #body div.content div div.aside h2 {
+	font-family:Arial;
+	font-size:14px;
+	color:#343831;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+#page #body div.content div div.aside ul {
+	margin:10px 0 30px 0;
+	padding:0 0 0 18px;
+	color:#343831;
+}
+#page #body div.content div div.aside ul li a {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:14px;
+	color:#252823;
+	letter-spacing:1px;
+}
+#page #body div.content div div.aside ul li a:hover {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:14px;
+	color:#033842;
+	text-decoration:underline;
+}
+#page #footer {
+	width:960px;
+	margin:0 auto;
+	padding:30px 0;
+	height:50px;
+	line-height:50px;
+}
+#page #footer ul.connect {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+#page #footer ul.connect li {
+	float:left;
+}
+#page #footer ul.connect li a {
+	text-decoration:none;
+	display:block;
+	margin-right:10px;
+}
+#page #footer ul.connect li a.facebook {
+	background:url("../images/icon.png") no-repeat scroll 0 -97px transparent;
+	width:47px;
+	height:47px;
+}
+#page #footer ul.connect li a.facebook:hover {
+	background:url("../images/icon.png") no-repeat scroll 0 0 transparent;
+}
+#page #footer ul.connect li a.twitter {
+	background:url("../images/icon.png") no-repeat scroll 0 -485px transparent;
+	width:47px;
+	height:47px;
+}
+#page #footer ul.connect li a.twitter:hover {
+	background:url("../images/icon.png") no-repeat scroll 0 -388px transparent;
+}
+#page #footer ul.connect li a.googleplus {
+	background:url("../images/icon.png") no-repeat scroll 0 -291px transparent;
+	width:47px;
+	height:47px;
+}
+#page #footer ul.connect li a.googleplus:hover {
+	background:url("../images/icon.png") no-repeat scroll 0 -194px transparent;
+}
+#page #footer span.footnote {
+	float:right;
+	font-family:Arial;
+	font-size:14px;
+	color:#383f33;
+}
+#page #footer span.footnote a {
+	text-decoration:none;
+	font-family:Arial;
+	font-size:14px;
+	color:#383f33;
+}
+#page #footer span.footnote a:hover {
+	color:#ffffff;
+}
