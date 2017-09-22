@@ -1,0 +1,222 @@
+body {
+	font:12px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+a:focus {
+	outline:1px dotted;
+}
+hr {
+	border:0 #ccc solid;
+	border-top-width:1px;
+	clear:both;
+	height:0;
+}
+h1 {
+	font-size:25px;
+}
+h2 {
+	font-size:23px;
+}
+h3 {
+	font-size:21px;
+}
+h4 {
+	font-size:19px;
+}
+h5 {
+	font-size:17px;
+}
+h6 {
+	font-size:15px;
+}
+ol {
+	list-style:decimal;
+}
+ul {
+	list-style:disc;
+}
+li {
+	margin-left:30px;
+}
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+	margin-bottom:20px;
+}
+
+.logo{
+	height: 400px;
+}
+
+#mainMenu{
+	margin-top: 30px;
+}
+.sitename a{
+	font-size: 40px;
+	text-decoration: none;
+	padding: 50px;
+	text-align: center;
+	
+}
+#content_item{
+	margin-top:100px;
+}
+
+ul#nav
+{ margin:0;}
+
+ul#nav li
+{ padding: 0 0 0 0px;
+  list-style: none;
+  margin: 2px 0 0 0;
+  display: inline;
+  background: transparent;}
+
+ul#nav li a
+{ float: left;
+  font: bold 120% Arial, Helvetica, sans-serif;
+  height: 24px;
+  margin: 10px 0 0 20px;
+  text-shadow: 0px -1px 0px #000;
+  padding: 6px 20px 0 20px;
+  background: transparent; 
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border: 7px 7px 7px 7px;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;} 
+  
+ul#nav li.current a
+{ color: #FFF;
+  background: #A46738;  
+  text-shadow: none;}
+  
+ul#nav li:hover a
+{ color: #FFF;
+  background: #A46738;
+  text-shadow: none;
+ }
+ 
+ 
+input, select, textarea {
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+input, textarea, select, .date {
+  border: 2px solid #a46000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  background: #fff4cf;
+}
+
+
+input[type="submit"] {
+  display: inline;
+  margin: 20px;
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #a46000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #000;
+  background: #fff4cf;
+  font-weight: bold;
+  -webkit-appearance: none;
+  font-size:20px;
+}
+
+input[type="submit"]:hover, input[type="submit"]:active {
+  cursor: pointer;
+  background: #a46000;
+  color: #fff;
+}
+
+input[type="submit"]:active {
+  background: #a46000;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+.main_contentx{
+	padding: 20px;
+	border: 1px solid #a46000;
+	margin: 10px;
+}
+
+ 
+.tt_tb {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+}
+.tt_tb th{
+	background; #a46738;
+}
+.tt_tb tr, .tt_tb th, .tt_tb td {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.tt_tb, .tt_tb th {
+  border: 1px solid #fff;
+}
+
+.tt_tb th {
+  border-left: none;
+  border-right: none;
+  background: #a46000;
+  color: #fff;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.tt_tb tr:nth-child(odd) {
+  background: #fff4cf;
+}
+
+.tt_tb tr:nth-child(even) {
+  background: #a46000;
+}
+
+.tt_tb tr:hover {
+  background: #a46000;
+  cursor: pointer;
+}
+
+
+ .ticketer{
+	width:98%;
+	font-size:20px;
+	border: 2px solid #E88017;
+	padding: 10px;
+ }
+ 
+ .tab_ticket{
+	width:98%;
+	font-size:25px;
+	padding: 10px;
+	margin: 10px auto;
+ }
+ 
+ .tab_ticket{
+	padding:10px; 
+ }
+ 
+ .my_ticket, .my_user{
+	 border: 2px solid #E88017;
+	 border-radius:10px;
+	 padding:20px;
+ }
+ 
+.info_tt{
+	color: #E88017;
+}
