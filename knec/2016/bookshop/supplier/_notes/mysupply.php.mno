@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Mysupplies" value="name:myid;datatype:int,name:suppid;datatype:string,name:itemid;datatype:int,name:name;datatype:string,name:desc;datatype:string,name:quantity;datatype:int,name:amount;datatype:int,name:regdate;datatype:timestamp" />
+</info>

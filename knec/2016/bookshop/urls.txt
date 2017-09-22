@@ -1,0 +1,6 @@
+Home/First Page       http://localhost/bookshop/
+
+Bookshop login        http://localhost/bookshop/user/index.php
+
+
+Supplier login         http://localhost/bookshop/supplier/index.php
